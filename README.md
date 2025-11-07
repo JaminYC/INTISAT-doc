@@ -63,7 +63,7 @@ The resulting document will be:
 
 slb-intisat-doc-v0.1.pdf
 Author:
-Jamin Alfredo Yauri Cajas
+
 Instituto de Radioastronomía – PUCP (INRAS)
 
 
