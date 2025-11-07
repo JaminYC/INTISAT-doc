@@ -1,0 +1,35 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage{pucp_intisat} % estilo institucional
+\begin{document}
+
+% === PORTADA ===
+\input{header/titlepage}
+
+% === CONTENIDO PRINCIPAL ===
+\tableofcontents
+\newpage
+
+\chapter{Mission Overview}
+\input{chapters/01_conops}
+
+\chapter{System Design}
+\input{chapters/02_system_design}
+
+\chapter{Payload – Digital Microscopy}
+\input{chapters/03_payload_microscopy}
+
+\chapter{Subsystems Overview}
+\input{chapters/04_subsystems}
+
+\chapter{Verification and Validation Plan}
+\input{chapters/05_verification}
+
+\appendix
+\chapter{Appendices}
+\input{appendices/appendix_a}
+
+% === BIBLIOGRAFÍA ===
+\bibliographystyle{plain}
+\bibliography{references/references}
+
+\end{document}

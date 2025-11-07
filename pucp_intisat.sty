@@ -1,0 +1,65 @@
+% ======================================================
+% PUCP - INTISAT DOCUMENT STYLE
+% Based on SpaceLab Book style (FloripaSat)
+% ======================================================
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{pucp_intisat}[2025/11/07 PUCP INRAS Style]
+
+% === Paquetes base ===
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,english]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath, amssymb}
+
+% === Configuración general ===
+\geometry{a4paper,margin=2.5cm}
+\setlength{\parskip}{0.7em}
+\setlength{\parindent}{0pt}
+\selectlanguage{english}
+
+% === Colores institucionales ===
+\definecolor{pucpblue}{RGB}{0,40,85}
+\definecolor{intisatgray}{RGB}{60,60,60}
+
+% === Hipervínculos ===
+\hypersetup{
+  colorlinks=true,
+  linkcolor=pucpblue,
+  citecolor=pucpblue,
+  urlcolor=pucpblue,
+  pdftitle={INTISAT Project Documentation},
+  pdfauthor={INRAS – PUCP},
+}
+
+% === Encabezado y pie de página ===
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{INTISAT Project – INRAS PUCP}}
+\fancyhead[R]{\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+
+% === Formato de capítulos ===
+\titleformat{\chapter}[hang]
+  {\Huge\bfseries\color{pucpblue}}
+  {\thechapter.}{1em}{}
+\titleformat{\section}
+  {\Large\bfseries\color{intisatgray}}
+  {\thesection}{1em}{}
+
+% === Comando de figura estándar ===
+\newcommand{\insertfigure}[3]{
+\begin{figure}[h]
+\centering
+\includegraphics[width=#2\textwidth]{figures/#1}
+\caption{#3}
+\end{figure}
+}
